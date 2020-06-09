@@ -38,23 +38,23 @@ _**In the Neighborhood** is a neighborhood forum for news, events, services, and
 - Implement Authentication using JWT.
 - Implement working generic controller actions for full-CRUD (index, show, create, update, delete) between the 2 non-user tables AND partial-CRUD (create, at least) for the user table.
 ### Client (Front End)
-Have a working, interactive React app, built using npx create-react-app.
-Have at least 8 separate, rendered components in an organized and understandable React file structure.
-Utilize functional and class React components appropriately.
-Utilize state and props in your components efficiently.
-Use only React for DOM Manipulation.
-Consume data from your Ruby on Rails API, and render that data in your components.
-Utilize React Router, for client-side routing.
-Utilize Authentication, permitting the user to:
-Register, login, and send authenticated requests.
-Perform index or show actions, whether or not they are logged in.^
-Perform create, update, and delete actions when logged in.
-^ Unless it makes sense for that information to be restricted to particular users.
+- Have a working, interactive React app, built using npx create-react-app.
+- Have at least 8 separate, rendered components in an organized and understandable React file structure.
+- Utilize functional and class React components appropriately.
+- Utilize state and props in your components efficiently.
+- Use only React for DOM Manipulation.
+- Consume data from your Ruby on Rails API, and render that data in your components.
+- Utilize React Router, for client-side routing.
+- Utilize Authentication, permitting the user to:
+- Register, login, and send authenticated requests.
+- Perform index or show actions, whether or not they are logged in.
+- Perform create, update, and delete actions when logged in.
+- Unless it makes sense for that information to be restricted to particular users.
 
 ### Styling
-Be styled with CSS (or SCSS, if you'd prefer).
-Use flexbox or Grid in your layout design.
-Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
+- Be styled with CSS (or SCSS, if you'd prefer).
+- Use flexbox or Grid in your layout design.
+- Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
 
 
 <br>
@@ -65,7 +65,7 @@ Implement 2 media queries for responsive design on 3 screen sizes (including des
 - _consectetur adipiscing elit._
 - _Phasellus dapibus fermentum risus vitae bibendum._
 - _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+_etc._
 
 <br>
 
