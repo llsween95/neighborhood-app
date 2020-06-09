@@ -28,15 +28,15 @@ _**In the Neighborhood** is a neighborhood forum for news, events, services, and
 ## MVP
 
 ### Server (Back End)
-Have a RESTful JSON API.
-Build a Ruby on Rails server, exposing RESTful JSON endpoints.
-Build a database with at least 3 tables:
-1 user table
-2 other tables, of your choosing
-There must be at least 1 association between your tables. (1:m or m:m)
-Utilize Rails to define models for interacting with the database.
-Implement Authentication using JWT.
-Implement working generic controller actions for full-CRUD (index, show, create, update, delete) between the 2 non-user tables AND partial-CRUD (create, at least) for the user table.
+- Have a RESTful JSON API.
+- Build a Ruby on Rails server, exposing RESTful JSON endpoints.
+- Build a database with at least 3 tables:
+  - 1 user table
+  - 2 other tables, of your choosing
+- There must be at least 1 association between your tables. (1:m or m:m)
+- Utilize Rails to define models for interacting with the database.
+- Implement Authentication using JWT.
+- Implement working generic controller actions for full-CRUD (index, show, create, update, delete) between the 2 non-user tables AND partial-CRUD (create, at least) for the user table.
 ### Client (Front End)
 Have a working, interactive React app, built using npx create-react-app.
 Have at least 8 separate, rendered components in an organized and understandable React file structure.
