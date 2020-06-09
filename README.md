@@ -20,7 +20,7 @@
 
 ## Overview
 
-_**In the Neighborhood** is a neighborhood forum for news, events, services, and recommendations. Users can post text and images as well as like and comment user posts._
+_**Community Forum** is a neighborhood forum for news, events, services, and recommendations. Users can post text and images as well as like and comment user posts._
 
 
 <br>
@@ -160,7 +160,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
+[!ERD](Screen Shot 2020-06-08 at 8.47.12 PM.png)
 
 <br>
 
