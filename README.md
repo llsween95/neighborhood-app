@@ -111,18 +111,22 @@ https://app.lucidchart.com/invitations/accept/0e47a9dc-dacf-4320-a04b-dd9731a79d
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
 |__ components/
+    |__ App.jsx
       |__ Header.jsx
+      |__ Main.jsx
+        |__ Login.jsx
+        |__ Registration.jsx
+        |__ ShowPosts.jsx
+        |__ PostItem.jsx
+        |__ CreatePost.jsx
+        |__ UpdatePost.jsx
 |__ services/
 
 ```
@@ -133,10 +137,9 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation, username, and logo._               |
+|   ShowPosts    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
+| PostItem | functional |   n   |   y   | _The cards will render the post info via props._                 |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Component Estimates
