@@ -82,6 +82,10 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 
 #### Wireframes
 
+https://whimsical.com/YCQgF8jkte44GY1JqEp1ZR
+
+<br />
+
 
 ![Show Posts](images/1.png)
 
@@ -121,7 +125,9 @@ src
         |__ Login.jsx
         |__ Registration.jsx
         |__ ShowPosts.jsx
+          |__ Comments.jsx
         |__ PostItem.jsx
+          |__ Comments.jsx
         |__ CreatePost.jsx
         |__ UpdatePost.jsx
 |__ services/
@@ -135,8 +141,13 @@ src
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | class |   n   |   n   | _The header will contain the navigation, username, and logo._               |
-|   ShowPosts    |   class    |   y   |   n   | _Lorem ipsum dolor sit amet, consectetur._      |
-| PostItem | class |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur.__                 |
+|    Main    | class |   y   |   y   | _The main component will contain all of the rest of the components._               |
+|   ShowPosts    |   class    |   y   |   y   | _Display user posts in a timeline with most recent appearing at the top._      |
+| PostItem | class |   n   |   y   | _Add text and/or image to display in timeline feed.__                 |
+|    UpdatePost    | class |   y   |   y   | _Update user posts._               |
+|    Comment    | class |   y   |   y   | _The comments component will contain display user comments on posts._               |
+|    Login    | class |   y   |   y   | _User sign in._               |
+|    Register    | class |   y   |   y   | _User sign up with auth._               |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Component Estimates
