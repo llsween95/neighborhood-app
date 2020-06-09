@@ -143,9 +143,11 @@ src
 |    Header    | class |   n   |   n   | _The header will contain the navigation, username, and logo._               |
 |    Main    | class |   y   |   y   | _The main component will contain all of the rest of the components._               |
 |   ShowPosts    |   class    |   y   |   y   | _Display user posts in a timeline with most recent appearing at the top._      |
+|   Post    |   class    |   y   |   y   | _Display a single user post._      |
 | PostItem | class |   n   |   y   | _Add text and/or image to display in timeline feed.__                 |
 |    UpdatePost    | class |   y   |   y   | _Update user posts._               |
-|    Comment    | class |   y   |   y   | _The comments component will contain display user comments on posts._               |
+|    Comments    | class |   y   |   y   | _The comments component will contain display user comments on posts._               |
+|    AddComment   | class |   y   |   y   | _The comments component will contain display user comments on posts._               |
 |    Login    | class |   y   |   y   | _User sign in._               |
 |    Register    | class |   y   |   y   | _User sign up with auth._               |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
@@ -156,23 +158,17 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Layout              |    M     |     2 hrs      |     TBD        |    TBD      |
-| Logo font           |    L     |     1 hrs      |    TBD        |    TBD      |
-| Header icons        |    L     |     1 hrs      |     TBD        |    TBD      |
-| Basic CSS              |    L    |     2 hrs      |     TBD        |    TBD      |
-| Home Page news feed              |    H    |     2 hrs      |     TBD        |    TBD      |
-| Add Post bar              |    M    |     2 hrs      |     TBD        |    TBD      |
-| Posts Feed              |    L    |     2 hrs      |     TBD        |    TBD      |
-| View Post              |    M    |     2 hrs      |     TBD        |    TBD      |
-| Update Post view              |    M    |     3 hrs      |     TBD        |    TBD      |
-| Display deadlink Like              |    M    |     1 hrs      |     TBD        |    TBD      |
-| Comments view for post              |    M    |     2 hrs      |     TBD        |    TBD      |
-| Register Form              |    M    |     1 hrs      |     TBD        |    TBD      |
-| Register Auth            |    M    |     3 hrs      |     TBD        |    TBD      |
-| Login Form              |    M    |     1 hrs      |     TBD        |    TBD      |
-| Login Auth              |    M    |     3 hrs      |     TBD        |    TBD      |
-| CRUD operations              |    M    |     2 hrs      |     TBD        |    TBD      |
-| Final CSS              |    M    |     2 hrs      |     TBD        |    TBD      |
+| Header         |    L     |     2 hrs      |     TBD        |    TBD      |
+| Main              |    H    |     3 hrs      |     TBD        |    TBD      |
+| ShowPosts              |    M    |     2 hrs      |     TBD        |    TBD      |
+| UpdatePosts              |    M    |     2 hrs      |     TBD        |    TBD      |
+| Post              |    M    |     2 hrs      |     TBD        |    TBD      |
+| UpdatePost              |    M    |     3 hrs      |     TBD        |    TBD      |
+| AddComment              |    M    |     3 hrs      |     TBD        |    TBD      |
+| Comments              |    M    |     3 hrs      |     TBD        |    TBD      |
+| Register              |    H    |     5 hrs      |     TBD        |    TBD      |
+| Login               |    H    |     4 hrs      |     TBD        |    TBD      |
+| CRUD operations              |    M    |     3 hrs      |     TBD        |    TBD      |
 
 
 
@@ -191,7 +187,11 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- User profile
+- Message users
+- Like Component
+- Post media
+- Search, Filter, Sort
 
 ***
 
