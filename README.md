@@ -72,9 +72,9 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-|   Ruby on Rails   | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Front-end framework._ |
+|   React Router   | _Routes._ |
+|   Ruby on Rails   | _Back-end framework._ |
 
 <br>
 
