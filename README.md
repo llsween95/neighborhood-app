@@ -61,25 +61,18 @@ _**In the Neighborhood** is a neighborhood forum for news, events, services, and
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-_etc._
+- Get to MVP by Friday
+- 
 
 <br>
 
 ### Libraries
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project.
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
@@ -87,7 +80,6 @@ _etc._
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
 
 ![Dummy Link](url)
 
@@ -115,7 +107,7 @@ _etc._
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+https://app.lucidchart.com/invitations/accept/0e47a9dc-dacf-4320-a04b-dd9731a79dac
 
 #### Component Hierarchy
 
