@@ -110,7 +110,7 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 
 https://app.lucidchart.com/invitations/accept/0e47a9dc-dacf-4320-a04b-dd9731a79dac
 
-![Component Tree] (component-tree.png)
+![Component Tree](component-tree.png)
 
 #### Component Hierarchy
 
