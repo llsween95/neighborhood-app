@@ -27,7 +27,7 @@ _**In the Neighborhood** is a neighborhood forum for news, events, services, and
 
 ## MVP
 
-###Server (Back End)
+### Server (Back End)
 Have a RESTful JSON API.
 Build a Ruby on Rails server, exposing RESTful JSON endpoints.
 Build a database with at least 3 tables:
@@ -37,7 +37,7 @@ There must be at least 1 association between your tables. (1:m or m:m)
 Utilize Rails to define models for interacting with the database.
 Implement Authentication using JWT.
 Implement working generic controller actions for full-CRUD (index, show, create, update, delete) between the 2 non-user tables AND partial-CRUD (create, at least) for the user table.
-###Client (Front End)
+### Client (Front End)
 Have a working, interactive React app, built using npx create-react-app.
 Have at least 8 separate, rendered components in an organized and understandable React file structure.
 Utilize functional and class React components appropriately.
@@ -51,7 +51,7 @@ Perform index or show actions, whether or not they are logged in.^
 Perform create, update, and delete actions when logged in.
 ^ Unless it makes sense for that information to be restricted to particular users.
 
-###Styling
+### Styling
 Be styled with CSS (or SCSS, if you'd prefer).
 Use flexbox or Grid in your layout design.
 Implement 2 media queries for responsive design on 3 screen sizes (including desktop).
