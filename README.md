@@ -160,7 +160,7 @@ src
 
 #### ERD Model
 
-[!ERD](Screen Shot 2020-06-08 at 8.47.12 PM.png)
+![ERD](erd.png)
 
 <br>
 
