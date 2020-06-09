@@ -20,7 +20,7 @@
 
 ## Overview
 
-_**Community Forum** is a neighborhood forum for news, events, services, and recommendations. Users can post text and images as well as like and comment user posts._
+_**Community Forum** is a neighborhood forum for news, events, services, and recommendations. Users can post text and images as well as like and comment on user posts._
 
 
 <br>
@@ -62,7 +62,8 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 ### Goals
 
 - Get to MVP by Friday
-- 
+- Build full-stack app with CRUD
+- Implement Auth and user persmissions to register, login, create posts, update posts, delete posts, and like posts.
 
 <br>
 
@@ -82,29 +83,22 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 #### Wireframes
 
 
-![Dummy Link](url)
+![Show Posts](images/1.png)
 
-- Desktop Landing
+- Desktop Landing/Show Posts
 
-![Dummy Link](url)
+![One Post](images/2.png)
 
-- Desktop Hero
+- Desktop One Post
 
-![Dummy Link](url)
+![Sign In](images/3.png)
 
-- Resource Index
+- Desktop Sign In
 
-![Dummy Link](url)
+![Sign Up](images/4.png)
 
-- Resource Show
+- Desktop Sign Up
 
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
