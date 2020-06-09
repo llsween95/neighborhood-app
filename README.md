@@ -73,6 +73,7 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 | :--------------: | :----------------------------------------- |
 |      React       | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
+|   Ruby on Rails   | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
@@ -109,6 +110,8 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 
 https://app.lucidchart.com/invitations/accept/0e47a9dc-dacf-4320-a04b-dd9731a79dac
 
+![Component Tree] (component-tree.png)
+
 #### Component Hierarchy
 
 ``` structure
@@ -137,9 +140,9 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation, username, and logo._               |
-|   ShowPosts    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| PostItem | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Header    | class |   n   |   n   | _The header will contain the navigation, username, and logo._               |
+|   ShowPosts    |   class    |   y   |   n   | _Lorem ipsum dolor sit amet, consectetur._      |
+| PostItem | class |   n   |   y   | _Lorem ipsum dolor sit amet, consectetur.__                 |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Component Estimates
