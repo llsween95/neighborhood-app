@@ -27,6 +27,12 @@ _**Community Forum** is a neighborhood forum for news, events, services, and rec
 
 ## MVP
 
+- User sign up/sign in/log out
+- User can create/edit/delete posts
+- User can create/edit/delete comments on a post
+- Posts are displayed as a newsfeed 
+- Posts can be individually selected and viewed
+
 ### Server (Back End)
 - Have a RESTful JSON API.
 - Build a Ruby on Rails server, exposing RESTful JSON endpoints.
@@ -179,7 +185,7 @@ src
 
 #### ERD Model
 
-![ERD](erd.png)
+![ERD](images/erd.png)
 
 <br>
 
