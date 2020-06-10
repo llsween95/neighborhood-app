@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_post, only: [:show, :update, :destroy, :like]
+  before_action :authorize_request, only: [:like]
 
   # GET /posts
   def index
@@ -37,6 +38,18 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
   end
+
+  def like
+    puts @post
+    puts params 
+    puts @current_user
+    @like = Like.new(user:@current_user, post:@post)
+    if @like.save
+      render json: @like, status: :created, location: @like
+    else
+      render json: @like.errors, status: :unprocessable_entity
+    end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

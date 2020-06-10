@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :likes
   resources :comments
-  resources :posts
+  resources :posts do 
+    member do 
+      put 'like'
+     end  
+  end
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   resources :users
