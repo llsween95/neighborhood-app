@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
-import { loginUser } from './services/auth'
-import { registerUser } from './services/auth'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 
 export default class App extends Component {
 
   state = {
     currentUser: null
   }
+
+
+  componentDidMount() {
+    this.handleVerify()
+  }
+
 
   handleLoginSubmit = async (loginData) => {
     const currentUser = await loginUser(loginData)
@@ -20,10 +25,29 @@ export default class App extends Component {
     this.setState({ currentUser })
   }
 
+  handleLogout = () => {
+    this.setState({
+      currentUser: null
+    })
+    localStorage.clear()
+    removeToken()
+  }
+
+  // allows user to remain logged in
+  handleVerify = async () => {
+    const currentUser = await verifyUser()
+    this.setState({ currentUser })
+  }
+
+
+
   render() {
     return (
       <>
-        <Header />
+        <Header
+          currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
+        />
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
           handleRegisterSubmit={this.handleRegisterSubmit}
