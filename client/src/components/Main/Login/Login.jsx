@@ -18,11 +18,13 @@ export default class Login extends Component {
     const { email, password } = this.state
 
     return (
-      <form
-        onSubmit={() => { this.props.handleLoginSubmit() }}
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        this.props.handleLoginSubmit(this.state)
+      }}
       >
         <h3>Login</h3>
-        <label for="email">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           name="email"
           value={email}
@@ -30,7 +32,7 @@ export default class Login extends Component {
           onChange={this.handleChange}
         />
         <br />
-        <label for="password">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input
           name="password"
           value={password}
