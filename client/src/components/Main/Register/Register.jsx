@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export default class Login extends Component {
+export default class Register extends Component {
 
   state = {
+    name: '',
     email: '',
     password: ''
   }
@@ -16,17 +17,27 @@ export default class Login extends Component {
   }
 
   render() {
-    const { email, password } = this.state
+    const { name, email, password } = this.state
 
     return (
       <form onSubmit={(e) => {
         e.preventDefault()
-        this.props.handleLoginSubmit(this.state)
+        this.props.handleRegisterSubmit(this.state)
       }}
       >
-        <h3>Login</h3>
+        <h3>Register</h3>
+        <label htmlFor="name">Name:</label>
+        <input
+          id="name"
+          name="name"
+          value={name}
+          type="text"
+          onChange={this.handleChange}
+        />
+        <br />
         <label htmlFor="email">Email:</label>
         <input
+          id="email"
           name="email"
           value={email}
           type="text"
@@ -35,6 +46,7 @@ export default class Login extends Component {
         <br />
         <label htmlFor="password">Password:</label>
         <input
+          id="password"
           name="password"
           value={password}
           type="password"
@@ -43,7 +55,6 @@ export default class Login extends Component {
         <br />
         <button>Submit</button>
         <br />
-        <Link to="/user/register">Register</Link>
       </form>
     )
   }

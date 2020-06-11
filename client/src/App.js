@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import { loginUser } from './services/auth'
+import { registerUser } from './services/auth'
 
 export default class App extends Component {
 
@@ -14,12 +15,18 @@ export default class App extends Component {
     this.setState({ currentUser })
   }
 
+  handleRegisterSubmit = async (registerData) => {
+    const currentUser = await registerUser(registerData)
+    this.setState({ currentUser })
+  }
+
   render() {
     return (
       <>
         <Header />
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
+          handleRegisterSubmit={this.handleRegisterSubmit}
         />
       </>
     )
