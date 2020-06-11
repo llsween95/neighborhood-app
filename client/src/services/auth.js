@@ -1,3 +1,5 @@
+import api from './api-helper'
+
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', { auth: loginData })
   localStorage.setItem('authToken', resp.data.token);

@@ -1,4 +1,4 @@
-import api from './api-helper';
+import axios from 'axios';
 
 const baseUrl = 'http://localhost:3000'
 

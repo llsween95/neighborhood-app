@@ -6,6 +6,7 @@ export default function Header() {
     <header>
       <h1>Community Forum</h1>
       <Link to='/user/login'>Login/Register</Link>
+      <hr />
     </header>
   )
 }
