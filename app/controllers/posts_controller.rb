@@ -1,16 +1,17 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :update, :destroy, :like]
   before_action :authorize_request, only: [:create, :update, :destroy, :like]
+  before_action :set_post, only: [:update, :destroy, :like]
 
   # GET /posts
   def index
     @posts = Post.all
 
-    render json: @posts
+    render json: @posts, include:[{ user:{only:[:id, :name]} }, {comments: {include: {user:{only: [:id, :name]}}}}]
   end
 
   # GET /posts/1
   def show
+    @post = Post.find(params[:id])
     render json: @post, include: :comments
   end
 
@@ -54,11 +55,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = current_user.posts.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:content, :user_id)
+      params.require(:post).permit(:content)
     end
 end
