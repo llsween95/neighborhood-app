@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom'
 import Login from './Login/Login'
 import Register from './Register/Register'
 import ShowPosts from './Posts/ShowPosts'
-import { getAllPosts } from '../../services/posts'
+import CreatePost from './Posts/CreatePost'
+import { getAllPosts, createPost } from '../../services/posts'
 
 export default class Main extends Component {
 
@@ -18,6 +19,13 @@ export default class Main extends Component {
   getPosts = async () => {
     const posts = await getAllPosts()
     this.setState({ posts })
+  }
+
+  createNewPost = async (postData) => {
+    const newPost = await createPost(postData)
+    this.setState(prevState => ({
+      posts: [...prevState.posts, newPost]
+    }))
   }
 
 
@@ -37,10 +45,17 @@ export default class Main extends Component {
             handleRegisterSubmit={this.props.handleRegisterSubmit}
           />
         )} />
-        <Route path="/" render={() => (
-          <ShowPosts
-            allPosts={this.state.posts}
-          />
+        <Route path="/" render={(props) => (
+          <>
+            <CreatePost
+              {...props}
+              createNewPost={this.createNewPost}
+            />
+            <br />
+            <ShowPosts
+              allPosts={this.state.posts}
+            />
+          </>
         )} />
       </main>
     )
