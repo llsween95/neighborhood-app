@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Header(props) {
   return (
@@ -11,6 +11,14 @@ export default function Header(props) {
           <>{props.currentUser.name} <button onClick={props.handleLogout}>Logout</button></>
           :
           <Link to='/user/login'>Login/Register</Link>
+      }
+      {
+        props.currentUser && (
+          <nav>
+            <NavLink to="">Notifications</NavLink>
+            <NavLink to="">Messages</NavLink>
+          </nav>
+        )
       }
       <hr />
     </header>
