@@ -49,6 +49,7 @@ export default class App extends Component {
           handleLogout={this.handleLogout}
         />
         <Main
+          currentUser={this.state.currentUser}
           handleLoginSubmit={this.handleLoginSubmit}
           handleRegisterSubmit={this.handleRegisterSubmit}
         />

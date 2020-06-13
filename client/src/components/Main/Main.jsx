@@ -4,7 +4,7 @@ import Login from './Login/Login'
 import Register from './Register/Register'
 import ShowPosts from './Posts/ShowPosts'
 import CreatePost from './Posts/CreatePost'
-import { getAllPosts, createPost } from '../../services/posts'
+import { getAllPosts, createPost, deletePost } from '../../services/posts'
 
 export default class Main extends Component {
 
@@ -25,6 +25,13 @@ export default class Main extends Component {
     const newPost = await createPost(postData)
     this.setState(prevState => ({
       posts: [...prevState.posts, newPost]
+    }))
+  }
+
+  deleteOnePost = async (id) => {
+    await deletePost(id)
+    this.setState(prevState => ({
+      posts: prevState.posts.filter(post => post.id !== id)
     }))
   }
 
@@ -53,7 +60,9 @@ export default class Main extends Component {
             />
             <br />
             <ShowPosts
+              currentUser={this.props.currentUser}
               allPosts={this.state.posts}
+              deleteOnePost={this.deleteOnePost}
             />
           </>
         )} />
