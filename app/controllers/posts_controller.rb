@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
-    render json: @post, include: :comments
+    render json: @post,  include:[{ user:{only:[:id, :name]} }, {comments: {include: {user:{only: [:id, :name]}}}}]
   end
 
   # POST /posts

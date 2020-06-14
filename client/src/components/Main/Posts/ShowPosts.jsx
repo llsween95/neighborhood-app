@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ShowPosts(props) {
   const { allPosts, currentUser, deleteOnePost, history } = props
@@ -11,24 +12,26 @@ export default function ShowPosts(props) {
       <h3>Posts:</h3>
       {
         allPosts.map(p => (
-          <div style={styler} key={p && p.id}>
-            <div>
-              <p key={p && p.id}>{p.user && p.user.name}</p>
-              <p key={p && p.id}>{p && p.content}</p>
-              {
-                currentUser && currentUser.id === (p && p.user_id) && (
-                  <>
-                    <button onClick={() => history.push(`/post/${p.id}/edit`)}>Edit</button>
-                    <button onClick={() => { deleteOnePost(p.id) }}>Delete</button>
-                  </>
-                )
-              }
+          <Link to='posts/:id' >
+            <div style={styler} key={p && p.id}>
+              <div>
+                <p key={p && p.id}>{p.user && p.user.name}</p>
+                <p key={p && p.id}>{p && p.content}</p>
+                {
+                  currentUser && currentUser.id === (p && p.user_id) && (
+                    <>
+                      <button onClick={() => history.push(`/posts/${p.id}/edit`)}>Edit</button>
+                      <button onClick={() => { deleteOnePost(p.id) }}>Delete</button>
+                    </>
+                  )
+                }
+              </div>
+              <br />
+              <p key={p && p.id}>{p && p.comments.map(comment => (
+                <p>{comment.content}</p>
+              ))}</p>
             </div>
-            <br />
-            <p key={p && p.id}>{p && p.comments.map(comment => (
-              <p>{comment.content}</p>
-            ))}</p>
-          </div>
+          </Link>
 
         )).reverse()
       }

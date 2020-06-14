@@ -5,6 +5,7 @@ import Register from './Register/Register'
 import ShowPosts from './Posts/ShowPosts'
 import CreatePost from './Posts/CreatePost'
 import UpdatePost from './Posts/UpdatePost'
+import PostItem from './Posts/PostItem'
 import { getAllPosts, createPost, deletePost, updatePost } from '../../services/posts'
 
 export default class Main extends Component {
@@ -75,7 +76,7 @@ export default class Main extends Component {
             />
           </>
         )} />
-        <Route path='/post/:id/edit' render={(props) => {
+        <Route path='/posts/:id/edit' render={(props) => {
           const postId = props.match.params.id;
           const post = this.state.posts.find(post => post.id === parseInt(postId));
           return <UpdatePost
@@ -83,6 +84,14 @@ export default class Main extends Component {
             post={post}
             putPost={this.putPost}
             getPosts={this.getPosts}
+          />
+        }} />
+        <Route path='/posts/:id' render={(props) => {
+          const postId = props.match.params.id;
+          const post = this.state.posts.find(post => post.id === parseInt(postId));
+          return <PostItem
+            post={post}
+            currentUser={this.props.currentUser}
           />
         }} />
       </main>
