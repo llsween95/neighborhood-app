@@ -4,7 +4,8 @@ import Login from './Login/Login'
 import Register from './Register/Register'
 import ShowPosts from './Posts/ShowPosts'
 import CreatePost from './Posts/CreatePost'
-import { getAllPosts, createPost, deletePost } from '../../services/posts'
+import UpdatePost from './Posts/UpdatePost'
+import { getAllPosts, createPost, deletePost, updatePost } from '../../services/posts'
 
 export default class Main extends Component {
 
@@ -35,6 +36,13 @@ export default class Main extends Component {
     }))
   }
 
+  putPost = async (id, postData) => {
+    const updatedPost = await updatePost(id, postData);
+    this.setState(prevState => ({
+      posts: prevState.posts.map(post => post.id === id ? updatedPost : post)
+    }))
+  }
+
 
   render() {
     return (
@@ -52,7 +60,7 @@ export default class Main extends Component {
             handleRegisterSubmit={this.props.handleRegisterSubmit}
           />
         )} />
-        <Route path="/" render={(props) => (
+        <Route exact path="/" render={(props) => (
           <>
             <CreatePost
               {...props}
@@ -60,12 +68,23 @@ export default class Main extends Component {
             />
             <br />
             <ShowPosts
+              {...props}
               currentUser={this.props.currentUser}
               allPosts={this.state.posts}
               deleteOnePost={this.deleteOnePost}
             />
           </>
         )} />
+        <Route path='/post/:id/edit' render={(props) => {
+          const postId = props.match.params.id;
+          const post = this.state.posts.find(post => post.id === parseInt(postId));
+          return <UpdatePost
+            {...props}
+            post={post}
+            putPost={this.putPost}
+            getPosts={this.getPosts}
+          />
+        }} />
       </main>
     )
   }

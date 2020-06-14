@@ -1,7 +1,11 @@
 import React from 'react'
 
 export default function ShowPosts(props) {
-  const { allPosts, currentUser, deleteOnePost } = props
+  const { allPosts, currentUser, deleteOnePost, history } = props
+
+
+
+
   return (
     <div>
       <h3>Posts:</h3>
@@ -9,12 +13,12 @@ export default function ShowPosts(props) {
         allPosts.map(p => (
           <div style={styler} key={p && p.id}>
             <div>
-              <p key={p && p.id}>{p && p.user.name}</p>
+              <p key={p && p.id}>{p.user && p.user.name}</p>
               <p key={p && p.id}>{p && p.content}</p>
               {
                 currentUser && currentUser.id === (p && p.user_id) && (
                   <>
-                    <button>Edit</button>
+                    <button onClick={() => history.push(`/post/${p.id}/edit`)}>Edit</button>
                     <button onClick={() => { deleteOnePost(p.id) }}>Delete</button>
                   </>
                 )
@@ -26,7 +30,7 @@ export default function ShowPosts(props) {
             ))}</p>
           </div>
 
-        ))
+        )).reverse()
       }
       {console.log(allPosts)}
     </div >
