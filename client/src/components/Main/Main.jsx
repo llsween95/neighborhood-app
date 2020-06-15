@@ -88,9 +88,9 @@ export default class Main extends Component {
         }} />
         <Route path='/posts/:id' render={(props) => {
           const postId = props.match.params.id;
-          const post = this.state.posts.find(post => post.id === parseInt(postId));
+          //const post = this.state.posts.find(post => post.id === parseInt(postId));
           return <PostItem
-            post={post}
+            postId={postId}
             currentUser={this.props.currentUser}
           />
         }} />

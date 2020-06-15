@@ -12,26 +12,25 @@ export default function ShowPosts(props) {
       <h3>Posts:</h3>
       {
         allPosts.map(p => (
-          <Link to='posts/:id' >
-            <div style={styler} key={p && p.id}>
-              <div>
-                <p key={p && p.id}>{p.user && p.user.name}</p>
-                <p key={p && p.id}>{p && p.content}</p>
-                {
-                  currentUser && currentUser.id === (p && p.user_id) && (
-                    <>
-                      <button onClick={() => history.push(`/posts/${p.id}/edit`)}>Edit</button>
-                      <button onClick={() => { deleteOnePost(p.id) }}>Delete</button>
-                    </>
-                  )
-                }
-              </div>
-              <br />
-              <p key={p && p.id}>{p && p.comments.map(comment => (
-                <p>{comment.content}</p>
-              ))}</p>
+          <div style={styler} key={p && p.id}>
+            <button onClick={() => history.push(`/posts/${p.id}`)}>View</button>
+            <div>
+              <p key={p && p.id}>{p.user && p.user.name}</p>
+              <p key={p && p.id}>{p && p.content}</p>
+              {
+                currentUser && currentUser.id === (p && p.user_id) && (
+                  <>
+                    <button onClick={() => history.push(`/posts/${p.id}/edit`)}>Edit</button>
+                    <button onClick={() => { deleteOnePost(p.id) }}>Delete</button>
+                  </>
+                )
+              }
             </div>
-          </Link>
+            <br />
+            <p key={p && p.id}>{p && p.comments.map(comment => (
+              <p>{comment.content}</p>
+            ))}</p>
+          </div>
 
         )).reverse()
       }
