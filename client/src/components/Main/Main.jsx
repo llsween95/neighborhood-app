@@ -6,6 +6,7 @@ import ShowPosts from './Posts/ShowPosts'
 import CreatePost from './Posts/CreatePost'
 import UpdatePost from './Posts/UpdatePost'
 import PostItem from './Posts/PostItem'
+import CreateComment from './Comments/CreateComment'
 import { getAllPosts, createPost, deletePost, updatePost } from '../../services/posts'
 
 export default class Main extends Component {

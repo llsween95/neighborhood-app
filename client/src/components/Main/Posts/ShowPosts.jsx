@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CreateComment from '../Comments/CreateComment'
 
 export default function ShowPosts(props) {
   const { allPosts, currentUser, deleteOnePost, history } = props
@@ -17,6 +18,8 @@ export default function ShowPosts(props) {
             <div>
               <p key={p && p.id}>{p.user && p.user.name}</p>
               <p key={p && p.id}>{p && p.content}</p>
+              <br />
+              <CreateComment />
               {
                 currentUser && currentUser.id === (p && p.user_id) && (
                   <>
