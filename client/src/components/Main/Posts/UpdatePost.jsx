@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Posts.css'
 
 export default class UpdatePost extends Component {
 
@@ -38,24 +39,25 @@ export default class UpdatePost extends Component {
     const { putPost, history, post } = this.props;
 
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        putPost(post.id, this.state);
-        history.push('/');
-        this.setState({
-          content: ''
-        })
-      }}>
-        <hr />
-        <h3>Update Post</h3>
-        <input
-          id="id"
-          type="text"
-          value={content}
-          onChange={this.handleChange}
-        />
-        <button>Submit</button>
-      </form>
+      <div className="update-container">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          putPost(post.id, this.state);
+          history.push('/');
+          this.setState({
+            content: ''
+          })
+        }}>
+          <h3>Update Post</h3>
+          <input
+            id="id"
+            type="text"
+            value={content}
+            onChange={this.handleChange}
+          />
+          <button>Submit</button>
+        </form>
+      </div>
     )
   }
 }
