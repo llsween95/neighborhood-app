@@ -8,6 +8,7 @@ import UpdatePost from './Posts/UpdatePost'
 import PostItem from './Posts/PostItem'
 import CreateComment from './Comments/CreateComment'
 import { getAllPosts, createPost, deletePost, updatePost } from '../../services/posts'
+import './Main.css'
 
 export default class Main extends Component {
 
@@ -93,6 +94,7 @@ export default class Main extends Component {
           return <PostItem
             postId={postId}
             currentUser={this.props.currentUser}
+
           />
         }} />
       </main>

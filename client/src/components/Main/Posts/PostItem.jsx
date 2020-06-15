@@ -10,7 +10,7 @@ export default class PostItem extends Component {
 
   componentDidMount() {
     console.log('yert')
-    const post = getOnePost(this.props.post);
+    const post = getOnePost(this.props.postId);
     console.log(post)
     this.setState({ post })
   }
@@ -23,11 +23,13 @@ export default class PostItem extends Component {
 
 
   render() {
+
     const { post } = this.state;
+    console.log(post && post.content)
     const { currentUser, postId } = this.props;
     return (
       <div>
-        <p>hi</p>
+        <p>{post && post.content}</p>
       </div>
     )
 
