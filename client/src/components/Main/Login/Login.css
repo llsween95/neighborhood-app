@@ -1,0 +1,36 @@
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5%;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login h3 {
+  margin-bottom: 15%;
+}
+
+.login input {
+  padding: 3% 5%;
+  width: 200px;
+}
+
+.login button {
+  background-color: green;
+  color: #f1f1f1;
+  padding: 5% 7%;
+  width: 100px;
+  margin: 2% auto;
+  border-radius: 5%;
+}
+
+.login a {
+  color: green;
+  text-decoration: none;
+}

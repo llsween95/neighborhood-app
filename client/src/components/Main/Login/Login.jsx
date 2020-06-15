@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './Login.css'
 
 export default class Login extends Component {
 
@@ -20,37 +21,41 @@ export default class Login extends Component {
     const { handleLoginSubmit, history } = this.props
 
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleLoginSubmit(this.state)
-        history.push('/')
-        this.setState({
-          email: '',
-          password: ''
-        })
-      }}
-      >
-        <h3>Login</h3>
-        <label htmlFor="email">Email:</label>
-        <input
-          name="email"
-          value={email}
-          type="text"
-          onChange={this.handleChange}
-        />
-        <br />
-        <label htmlFor="password">Password:</label>
-        <input
-          name="password"
-          value={password}
-          type="password"
-          onChange={this.handleChange}
-        />
-        <br />
-        <button>Submit</button>
-        <br />
-        <Link to="/user/register">Register</Link>
-      </form>
+      <div className="login">
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          handleLoginSubmit(this.state)
+          history.push('/')
+          this.setState({
+            email: '',
+            password: ''
+          })
+        }}
+        >
+          <h3>Login</h3>
+          <div>
+            <input
+              placeholder="Email"
+              name="email"
+              value={email}
+              type="text"
+              onChange={this.handleChange}
+            />
+            <br />
+            <input
+              placeholder="Password"
+              name="password"
+              value={password}
+              type="password"
+              onChange={this.handleChange}
+            />
+          </div>
+          <br />
+          <button>Submit</button>
+          <br />
+          <Link to="/user/register">Register</Link>
+        </form>
+      </div>
     )
   }
 }

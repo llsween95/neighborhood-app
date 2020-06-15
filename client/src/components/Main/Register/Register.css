@@ -1,0 +1,36 @@
+.register {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5%;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.register h3 {
+  margin-bottom: 15%;
+}
+
+.register input {
+  padding: 3% 5%;
+  width: 200px;
+}
+
+.register button {
+  background-color: green;
+  color: #f1f1f1;
+  padding: 5% 7%;
+  width: 100px;
+  margin: 2% auto;
+  border-radius: 5%;
+}
+
+.register a {
+  color: green;
+  text-decoration: none;
+}

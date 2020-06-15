@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Posts.css'
 
 export default class CreatePost extends Component {
 
@@ -17,7 +18,7 @@ export default class CreatePost extends Component {
     const { content } = this.state.content
     const { createNewPost, history } = this.props
     return (
-      <form onSubmit={(e) => {
+      <form className='postForm' onSubmit={(e) => {
         //e.preventDefault()
         createNewPost(this.state)
         history.push('/')

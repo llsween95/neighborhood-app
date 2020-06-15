@@ -1,0 +1,31 @@
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer form {
+  width: 175px;
+}
+
+.formContainer input {
+  margin-right: 10px;
+  background-color: #E8E8E8;
+  padding: 1.5% 2%;
+}
+
+.formContainer button {
+  padding: 2%;
+  background-color: green;
+  color: #f1f1f1
+}
+
+.allComments {
+  font-size: 0.9rem;
+  margin: 5%;
+}
+
+.userAndComment {
+  display: flex;
+  align-items: flex-start;
+}

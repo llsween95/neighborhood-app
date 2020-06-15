@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import './Register.css'
 
 export default class Register extends Component {
 
@@ -21,48 +22,54 @@ export default class Register extends Component {
     const { handleRegisterSubmit, history } = this.props
 
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleRegisterSubmit(this.state)
-        history.push('/')
-        this.setState({
-          name: '',
-          email: '',
-          password: ''
-        })
-      }}
-      >
-        <h3>Register</h3>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          name="name"
-          value={name}
-          type="text"
-          onChange={this.handleChange}
-        />
-        <br />
-        <label htmlFor="email">Email:</label>
-        <input
-          id="email"
-          name="email"
-          value={email}
-          type="text"
-          onChange={this.handleChange}
-        />
-        <br />
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          name="password"
-          value={password}
-          type="password"
-          onChange={this.handleChange}
-        />
-        <br />
-        <button>Submit</button>
-        <br />
-      </form>
+      <div className="register">
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          handleRegisterSubmit(this.state)
+          history.push('/')
+          this.setState({
+            name: '',
+            email: '',
+            password: ''
+          })
+        }}
+        >
+          <h3>Register</h3>
+          <div>
+            <input
+              placeholder="Name"
+              id="name"
+              name="name"
+              value={name}
+              type="text"
+              onChange={this.handleChange}
+            />
+            <br />
+            <input
+              placeholder="Email"
+              id="email"
+              name="email"
+              value={email}
+              type="text"
+              onChange={this.handleChange}
+            />
+            <br />
+            <input
+              placeholder="Password"
+              id="password"
+              name="password"
+              value={password}
+              type="password"
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <br />
+          <button>Submit</button>
+          <br />
+          <Link to="/user/login">Login</Link>
+        </form>
+      </div>
     )
   }
 }

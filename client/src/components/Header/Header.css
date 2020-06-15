@@ -7,7 +7,6 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 2.5%;
 }
 
 /* .section-right {
@@ -38,4 +37,56 @@ nav a {
   margin: 0 2.5%;
   color: #f1f1f1;
   text-decoration: none;
+}
+
+ion-icon {
+  font-size: 24px;
+  margin-right: 7.5px;
+}
+
+
+@media screen and (max-width: 480px)  {
+  
+  h1 {
+    font-size: 0.8rem;
+  }
+
+  header {
+    padding: 10% auto;
+  }
+
+  .section-right {
+    color: #f1f1f1;
+  }
+
+  .logoutBtn {
+    color: #f1f1f1;
+    border: 1px solid black;
+    background-color: green;
+  }
+
+  .user-container {
+    font-size: 24px;
+    align-items: center;
+  }
+ 
+}
+
+
+@media screen and (max-width: 1025px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+
+  .user-container {
+    font-size: 12px;
+    align-items: center;
+  }
+
+  .logoutBtn {
+    color: #f1f1f1;
+    border: 1px solid black;
+    background-color: green;
+  }
 }

@@ -8,6 +8,7 @@ export default function Header(props) {
       <h1>Community Forum</h1>
       <div className="section-right">
         <div className="user-container">
+          <ion-icon name="person-circle-outline"></ion-icon>
           {
             props.currentUser
               ?

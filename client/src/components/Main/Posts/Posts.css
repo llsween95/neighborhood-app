@@ -1,0 +1,84 @@
+.postContainer {
+  background-color: white;
+}
+
+.postForm {
+  width: 350px;
+  border: 1px solid black;
+  padding: 2% 2.5%;
+  display: flex;
+  background: white;
+}
+
+.postForm input {
+  width: 250px;
+  padding: 2.5%;
+  background-color: #E8E8E8;
+}
+
+.postForm button {
+  padding: 1% 2%;
+  margin-left: 15px;
+  background-color: green;
+  color: #f1f1f1;
+}
+
+.allPostsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.post-content {
+  margin: 30px auto;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnContainer button {
+  margin: 2.5%;
+  border: none;
+  color: green;
+}
+
+hr {
+  margin: 0 2%;
+}
+
+
+
+@media screen and (max-width: 480px) {
+ .postContainer {
+   width: 350px;
+ }
+ .post-content {
+   margin: 10px auto;
+   font-size: 0.7rem;
+ }
+ .userContainer {
+  font-size: 0.6rem;
+}
+ 
+}
+
+@media screen and (max-width: 1025px) {
+  
+  .post-content {
+    margin: 20px auto;
+  }
+  .userContainer {
+    font-size: 0.7rem;
+  }
+}
