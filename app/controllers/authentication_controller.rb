@@ -5,7 +5,6 @@ class AuthenticationController < ApplicationController
   def login
     puts params
     @user = User.find_by_email(login_params[:email])
-    puts 'eh'
     puts @user
     if @user.authenticate(login_params[:password]) #authenticate method provided by Bcrypt and 'has_secure_password'
       # next two lines should be identicle to user controller
